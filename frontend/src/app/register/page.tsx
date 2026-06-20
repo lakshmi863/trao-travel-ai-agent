@@ -25,7 +25,7 @@ export default function Register() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-slate-950 p-4">
       <div className="w-full max-w-md bg-slate-900 border border-slate-800 p-8 rounded-2xl">
-        <h1 className="text-3xl font-bold text-center mb-6 text-white">Create Account</h1>
+        <h1 className="text-3xl font-bold text-center mb-6 !text-white">Create Account</h1>
         {error && <div className="p-3 mb-4 bg-red-500/10 border border-red-500 text-red-500 rounded text-sm">{error}</div>}
         <form onSubmit={handleRegister} className="space-y-4">
           <input type="email" placeholder="Email" className="w-full p-3 rounded-lg bg-slate-800 border border-slate-700 outline-none" onChange={e => setEmail(e.target.value)} required />
