@@ -88,7 +88,7 @@ export default function Dashboard() {
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
           <div className="flex items-center gap-2">
           
-             <img src="/src/assets/trao-logo.jpg" alt="Trao Logo" className="w-10 h-10 rounded-lg" />
+             <img src="/trao-logo.jpg" alt="Trao Logo" className="w-10 h-10 rounded-lg" />
             <h1 className="text-xl font-black tracking-tighter !text-white">Trao <span className="text-blue-500">AI</span></h1>
           </div>
           <button onClick={() => { localStorage.clear(); navigate('/login'); }} className="flex items-center gap-2 text-slate-400 hover:text-white transition">
