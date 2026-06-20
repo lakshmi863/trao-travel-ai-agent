@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Plane, Sparkles, Map, ShieldCheck } from 'lucide-react';
+import { Sparkles, Map, ShieldCheck } from 'lucide-react';
 
 export default function LandingPage() {
   return (
