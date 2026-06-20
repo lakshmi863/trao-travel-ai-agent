@@ -5,8 +5,7 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen bg-slate-950 text-white flex flex-col items-center justify-center p-8">
       <div className="bg-blue-600 p-4 rounded-2xl mb-6">
-        <Plane size={40} className="text-white" />
-        <img src="/src/assets/trao-logo.jpg" alt="Trao Logo" className="w-20 h-20 rounded-2xl mb-6" />
+        <img src="/trao-logo.jpg" alt="Trao Logo" className="w-20 h-20 rounded-2xl mb-6" />
       </div>
       <h1 className="text-6xl font-black tracking-tighter mb-4 !text-white">TRAO <span className="text-blue-500">AI</span></h1>
       <p className="text-slate-400 text-lg text-center max-w-md mb-12">
