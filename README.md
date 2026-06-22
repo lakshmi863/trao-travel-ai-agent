@@ -4,6 +4,17 @@ An intelligent travel planning application that helps users organize trips, gene
 
 ---
 
+##Architecture
+
+<img width="1536" height="1024" alt="Architecture" src="https://github.com/user-attachments/assets/9856914f-fa4e-4252-bf8f-f6c982e73e4b" />
+
+##Websites link( https://trao-travel-front.onrender.com )
+
+##PPT( https://docs.google.com/presentation/d/1I9W9kTVOvEnUOGZgE_pJ3H9cOe2JZaZl/edit?usp=drive_link&ouid=103353594696147852001&rtpof=true&sd=true) 
+
+##Recoding( ) 
+
+
 ## 📖 Project Overview
 
 AI-Powered Travel Planner is a full-stack web application designed to simplify travel planning. The application allows users to create trips, manage itineraries, discover hotels, and organize packing lists from a single platform.
