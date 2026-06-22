@@ -7,12 +7,26 @@ const ActivitySchema = new mongoose.Schema({
   timeOfDay: { type: String, enum: ['Morning', 'Afternoon', 'Evening'] }
 });
 
+// ─── Enhanced Hotel Schema ─────────────────────────────────────────────────────
+const HotelSchema = new mongoose.Schema({
+  name: { type: String, required: true },
+  tier: { type: String, enum: ['Budget', 'Mid-Range', 'Luxury', 'Top Pick'] },
+  estimatedCostNightUSD: { type: Number },
+  rating: { type: String },           // e.g. "4.5"
+  reviewCount: { type: Number },      // e.g. 1240
+  location: { type: String },         // e.g. "City Center, near Eiffel Tower"
+  amenities: [{ type: String }],      // e.g. ["Free WiFi", "Pool", "Breakfast"]
+  highlights: { type: String },       // one-sentence standout
+  travelerType: { type: String },     // e.g. "Couples", "Solo Travelers"
+  bookingUrl: { type: String }        // deep-link to booking.com search
+});
+
 const TripSchema = new mongoose.Schema({
   userId: {
-  type: Number, // Change this from mongoose.Schema.Types.ObjectId
-  ref: 'User',
-  required: true
-},
+    type: Number,
+    ref: 'User',
+    required: true
+  },
   destination: { type: String, required: true },
   durationDays: { type: Number, required: true },
   budgetTier: { type: String, enum: ['Low', 'Medium', 'High'], required: true },
@@ -21,12 +35,7 @@ const TripSchema = new mongoose.Schema({
     dayNumber: { type: Number, required: true },
     activities: [ActivitySchema]
   }],
-  hotels: [{
-    name: { type: String, required: true },
-    tier: { type: String },
-    estimatedCostNightUSD: { type: Number },
-    rating: { type: String }
-  }],
+  hotels: [HotelSchema],
   estimatedBudget: {
     transport: { type: Number, default: 0 },
     accommodation: { type: Number, default: 0 },
@@ -34,7 +43,6 @@ const TripSchema = new mongoose.Schema({
     activities: { type: Number, default: 0 },
     total: { type: Number, default: 0 }
   },
-  // Creative Feature data structures
   packingList: [{
     item: { type: String, required: true },
     category: { type: String, enum: ['Documents', 'Clothing', 'Gear', 'Other'] },

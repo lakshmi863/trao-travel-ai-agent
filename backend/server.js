@@ -15,7 +15,7 @@ connectDB();
 const app = express();
 
 app.use(cors({
-  origin: 'https://trao-travel-front.onrender.com',
+   origin: ['http://localhost:5173', 'https://trao-travel-front.onrender.com'],
   credentials: true
 }));
 app.use(express.json());
